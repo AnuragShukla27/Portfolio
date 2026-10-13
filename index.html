@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anurag Shukla — Portfolio</title>
+  <meta name="description" content="Portfolio of Anurag Shukla, Graphic/UI Designer with 4 years of experience in branding, digital campaigns, print, motion graphics, video editing and UI design.">
+  <meta name="theme-color" content="#0B0B0F">
+
+  <!-- Fonts: Poppins (all text). Bostone (PORTFOLIO title) is loaded locally from fonts/Bostone.ttf -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Marks JS as available. If script.js fails to load, content is still shown after 4s. -->
+  <script>
+    document.documentElement.classList.add('js');
+    setTimeout(function () {
+      if (!window.__ready) document.documentElement.classList.add('no-reveal');
+    }, 4000);
+  </script>
+</head>
+
+<body>
+  <a class="skip" href="#about">Skip to content</a>
+
+  <!-- ============ TOP BAR ============ -->
+  <header class="topbar">
+    <a class="topbar__logo" href="#home" aria-label="Anurag Shukla — back to top">Welcome to my Creative Portfolio<i></i></a>
+    <button class="btn" id="menuBtn" type="button" aria-haspopup="dialog">Menu</button>
+  </header>
+
+  <!-- ============ MENU POPUP ============ -->
+  <dialog class="dialog menu" id="menu" aria-label="Site menu">
+    <div class="dialog__inner">
+      <button class="btn dialog__close" type="button" data-close aria-label="Close menu">Close ✕</button>
+      <nav aria-label="Primary">
+        <ul class="menu__list">
+          <li><a href="#about"><span>01</span>About</a></li>
+          <li><a href="#skills"><span>02</span>Skills &amp; Hobbies</a></li>
+          <li><a href="#branding"><span>03</span>Branding Logos</a></li>
+          <li><a href="#showcase"><span>04</span>Animated Showcase</a></li>
+          <li><a href="#social"><span>05</span>Social Media</a></li>
+          <li><a href="#motion"><span>05</span>Motion Graphics</a></li>
+          <li><a href="#app"><span>06</span>Mobile App</a></li>
+          <li><a href="#web"><span>07</span>Website Design</a></li>
+          <li><a href="#contact"><span>08</span>Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </dialog>
+
+  <!-- ============ LIGHTBOX POPUP (images + videos) ============ -->
+  <dialog class="dialog lightbox" id="lightbox" aria-label="Preview">
+    <div class="dialog__inner">
+      <button class="btn dialog__close" type="button" data-close aria-label="Close preview">Close ✕</button>
+      <div class="lightbox__media" id="lbMedia"></div>
+      <p class="lightbox__caption" id="lbCaption"></p>
+    </div>
+  </dialog>
+
+  <main>
+    <noscript><p class="wrap noscript">Please enable JavaScript to view the full portfolio.</p></noscript>
+
+    <!-- ============================================================
+         PAGE 1 — HERO
+         ============================================================ -->
+    <section class="hero" id="home">
+      <!-- Animated green AI-network background (drawn by script.js) -->
+      <canvas class="hero__net" id="heroNet" aria-hidden="true"></canvas>
+
+      <p class="eyebrow hero__eyebrow">Graphic / UI Designer</p>
+
+      <!-- PORTFOLIO title sits behind, the portrait is fully in front of it -->
+      <div class="hero__stage">
+        <h1 class="hero__title" aria-label="Portfolio">
+          <span aria-hidden="true" style="--i:0">P</span><span aria-hidden="true" style="--i:1">O</span><span aria-hidden="true" style="--i:2">R</span><span aria-hidden="true" style="--i:3">T</span><span aria-hidden="true" style="--i:4">F</span><span aria-hidden="true" style="--i:5">O</span><span aria-hidden="true" style="--i:6">L</span><span aria-hidden="true" style="--i:7">I</span><span aria-hidden="true" style="--i:8">O</span>
+        </h1>
+
+        <button class="hero__photo" id="portrait" type="button" aria-label="Open portrait larger">
+          <img src="images/portrait.png" width="800" height="1200" alt="Portrait of Anurag Shukla">
+        </button>
+      </div>
+
+      <p class="hero__sub">Anurag Shukla &nbsp;·&nbsp; 4 Years of Experience</p>
+
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span></span>Scroll</a>
+    </section>
+
+    <!-- ============================================================
+         PAGE 1 — ABOUT / EDUCATION / EXPERIENCE
+         ============================================================ -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <p class="eyebrow">01 — About</p>
+          <h2>About <em>Me</em></h2>
+        </div>
+
+        <div class="about">
+          <!-- LEFT: single-paragraph bio -->
+          <div class="about__left">
+            <p class="bio" data-reveal>
+              Graphic & UI Designer with 4 years of experience specializing in UI design, brand identity, landing page design, and B2B & B2C digital creatives. Proven ability to translate ideas into visually compelling designs that enhance user engagement, strengthen brand consistency, and support conversion-focused digital experiences.
+            </p>
+            <ul class="facts" data-reveal style="--i:1">
+              <li><b>4 Years</b><span>Experience</span></li>
+              <li><b>Adventus.io</b><span>Current</span></li>
+              <li><b>Bharti Airtel</b><span>Previous</span></li>
+            </ul>
+          </div>
+
+          <!-- RIGHT: education then experience -->
+          <div class="about__right">
+            <h3 class="sub" data-reveal>Education</h3>
+            <!-- EDIT: replace the placeholder education details below with your own -->
+            <ol class="timeline timeline--edu" data-reveal>
+              <li class="tl" data-reveal style="--i:1">
+                <span class="tl__node" aria-hidden="true">01</span>
+                <div class="card tl__card">
+                  <span class="chip">Oct 2021 – July 2023</span>
+                  <h4>Master of Business Administration</h4>
+                  <p>Maharaja Agrasen University, Solan, HP</p>
+                </div>
+              </li>
+              <li class="tl" data-reveal style="--i:2">
+                <span class="tl__node" aria-hidden="true">02</span>
+                <div class="card tl__card">
+                  <span class="chip">October 2022</span>
+                  <h4>Diploma in UI-UX Advanced Designing</h4>
+                  <p>Arena Animation, Chandigarh</p>
+                </div>
+              </li>
+              <li class="tl" data-reveal style="--i:2">
+                <span class="tl__node" aria-hidden="true">03</span>
+                <div class="card tl__card">
+                  <span class="chip">August 2018 – July 2021</span>
+                  <h4>Bachelor in Computer Application</h4>
+                  <p>Maharaja Agrasen University, Solan, HP</p>
+                </div>
+              </li>
+            </ol>
+
+            <h3 class="sub sub--gap" data-reveal>Experience</h3>
+            <ol class="timeline" data-reveal>
+              <li class="tl" data-reveal style="--i:1">
+                <span class="tl__node" aria-hidden="true">01</span>
+                <div class="card tl__card">
+                  <span class="chip chip--lime">July 2025 – Present</span>
+                  <h4>Adventus.io Pvt Ltd</h4>
+                  <p class="tl__role">Graphic Designer</p>
+                  <ul>
+                    <li>Design engaging B2B & B2C social media creatives, including daily posts, reels, and marketing campaigns for student and partner audiences.</li>
+                    <li>Design web landing pages, UI-based website templates, and page layouts, focusing on usability, visual hierarchy, and conversion.</li>
+                    <li>Develop email templates, flyers, PowerPoint presentations, banners, and marketing collateral for Adventus.io international teams.</li>
+                    <li>Create infographics and visual communication assets to simplify complex information and support marketing and educational campaigns.</li>
+                    <li>Handle video production, including shooting and editing short-form content such as social media reels, promotional videos, and podcast sessions.</li>
+                    <li>Collaborate with marketing, social media, product, and development teams to understand requirements and deliver tailored creative solutions.</li>
+                  </ul>
+                   <p class="tl__role">Motion Graphics & Video Editing</p>
+                  <ul>
+                    <li>Creating engaging motion graphics and video content for digital platforms.</li>
+                    <li>Strong understanding of animation, transitions, typography, and 2D animation.</li>
+                    <li>Designing reels, ads, and explainer video elements with clear visual storytelling.</li>
+                    <li>Utilizing presets and templates with customizations as per brand requirements.</li>
+                    <li>Handling end-to-end video production from concept to final output.</li>
+                
+                  </ul>
+                </div>
+              </li>
+              <li class="tl" data-reveal style="--i:2">
+                <span class="tl__node" aria-hidden="true">02</span>
+                <div class="card tl__card">
+                  <span class="chip">October 2022 – July 2025</span>
+                  <h4>Bharti Airtel Pvt Ltd</h4>
+                  <p class="tl__role">Creative Designer</p>
+                  <ul>
+                    <li>Designed and refined PowerPoint presentations, pitchbook, and corporate communication materials for internal and business requirements.</li>
+                    <li>Developed brand identities, visual systems, and branding guidelines while maintaining consistent brand communication.</li>
+                    <li>Created print-ready designs including leaflets, banners, posters, danglers, standees, and other marketing collateral.</li>
+                    <li>Translated concepts and requirements into visually engaging layouts, with a strong focus on typography, color, hierarchy, and composition.</li>
+                    <li>Ensured all final designs were visually polished, brand-aligned, and production-ready across digital and print formats.</li>
+                  </ul>
+                  
+              
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PAGE 2 — SKILLS + HOBBIES
+         ============================================================ -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <div class="head head--sm" data-reveal>
+          <p class="eyebrow">02 — Skills</p>
+          <h2>My <em>Skills</em></h2>
+        </div>
+
+        <!-- Built from the SKILLS list in script.js -->
+        <div class="skills" id="skillsGrid"></div>
+
+        <div class="head head--gap head--sm head--center" data-reveal>
+          <p class="eyebrow">Beyond design</p>
+          <h2>My <em>activities</em></h2>
+        </div>
+
+        <!-- Two small white line icons, centered -->
+        <div class="hobbies">
+          <div class="card hobby" data-reveal>
+            <img class="sketch" src="images/hobby-sketch.png" alt="" aria-hidden="true">
+            <b>Sketching</b>
+          </div>
+
+          <div class="card hobby" data-reveal style="--i:1">
+            <img class="sketch" src="images/hobby-travel.png" alt="" aria-hidden="true">
+            <b>Traveling</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PAGE 3 — BRANDING LOGOS
+         ============================================================ -->
+    <section class="section" id="branding">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <p class="eyebrow">03 — Branding</p>
+          <h2>Branding <em>Logos</em></h2>
+          <p class="head__note">Eight logo marks. Demo brands, to be replaced with real work.</p>
+        </div>
+        <div class="grid grid--logos" data-gallery="logos"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ANIMATED MULTI-SCREEN PORTFOLIO SHOWCASE
+         ============================================================ -->
+    <section class="section showcase" id="showcase" aria-label="Animated portfolio showcase">
+      <div class="wrap showcase__layout">
+        <div class="showcase__intro" data-reveal>
+          <p class="eyebrow">Selected creative work</p>
+          <h2>Ideas in <em>motion.</em></h2>
+          <p>Social campaigns, digital experiences and interface concepts — brought together in one moving showcase.</p>
+          <a class="showcase__link" href="#social">Explore all projects <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="showcase__stage" aria-label="Animated preview cards">
+          <div class="showcase__orbit showcase__orbit--one"></div><div class="showcase__orbit showcase__orbit--two"></div>
+          <article class="showcase-card showcase-card--social" data-showcase-card>
+            <div class="mock-top"><span class="mock-brand">SOCIAL / 01</span><span class="mock-dots">•••</span></div>
+            <div class="mock-social-art"><span class="mock-kicker">MAKE IT</span><strong>STAND<br>OUT.</strong><i class="mock-sun"></i><span class="mock-small">CREATIVE CAMPAIGN · 2026</span></div>
+            <div class="mock-bottom"><span>♡　◯　➤</span><span>01 / 06</span></div>
+          </article>
+          <article class="showcase-card showcase-card--dashboard" data-showcase-card>
+            <div class="mock-top"><span class="mock-brand">PRODUCT / 02</span><span class="mock-dots">•••</span></div>
+            <div class="mock-dashboard"><div class="mock-side"><b>◈</b><i></i><i></i><i></i><i></i></div><div class="mock-dash-main"><span class="mock-label">OVERVIEW</span><strong>Good morning, Alex</strong><div class="mock-stat-row"><i></i><i></i><i></i></div><div class="mock-chart"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="mock-lines"><i></i><i></i><i></i></div></div></div>
+            <div class="mock-bottom"><span>Dashboard concept</span><span>02 / 06</span></div>
+          </article>
+          <article class="showcase-card showcase-card--mobile" data-showcase-card>
+            <div class="mock-phone"><div class="mock-notch"></div><span class="mock-label">YOUR NEXT CHAPTER</span><strong>Build a life<br>you love.</strong><div class="mock-phone-blob"></div><div class="mock-phone-button">Get started　↗</div><div class="mock-phone-nav">⌂　　 ◯　　 ♡　　 ◉</div></div>
+          </article>
+          <article class="showcase-card showcase-card--brand" data-showcase-card>
+            <div class="mock-top"><span class="mock-brand">IDENTITY / 04</span><span class="mock-dots">•••</span></div>
+            <div class="mock-brand-art"><span>FORM</span><strong>FOLIO®</strong><i>BRAND SYSTEM / 2026</i></div>
+            <div class="mock-bottom"><span>Brand identity</span><span>04 / 06</span></div>
+          </article>
+          <article class="showcase-card showcase-card--web" data-showcase-card>
+            <div class="mock-top"><span class="mock-brand">WEB DESIGN / 05</span><span class="mock-dots">•••</span></div>
+            <div class="mock-web-art"><span>DESIGN THAT</span><strong>MOVES<br>YOU.</strong><div class="mock-web-image"></div><i>Discover the experience ↗</i></div>
+            <div class="mock-bottom"><span>Landing page</span><span>05 / 06</span></div>
+          </article>
+          <article class="showcase-card showcase-card--campaign" data-showcase-card>
+            <div class="mock-top"><span class="mock-brand">CAMPAIGN / 06</span><span class="mock-dots">•••</span></div>
+            <div class="mock-campaign-art"><span>THINK</span><strong>BIGGER.</strong><i>GOOD IDEAS DESERVE TO BE SEEN.</i><b>LET'S GO ↗</b></div>
+            <div class="mock-bottom"><span>Digital campaign</span><span>06 / 06</span></div>
+          </article>
+          <span class="showcase__hint">A selection of design directions</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SOCIAL MEDIA POSTS / MOCKUPS / BROCHURES / BANNERS
+         ============================================================ -->
+    <section class="section" id="social">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <p class="eyebrow">04 — Social &amp; Print</p>
+          <h2>Social Media <em>Posts</em></h2>
+        </div>
+
+        <div class="subhead" data-reveal><h3>Posters</h3><span class="chip">1080 × 1350 px · 6 designs</span></div>
+        <div class="grid grid--3" data-gallery="posts"></div>
+
+        <div class="subhead" data-reveal><h3>Poster Mockups</h3><span class="chip">1080 × 1350 px · 3 mockups</span></div>
+        <div class="grid grid--3" data-gallery="postMockups"></div>
+
+        <div class="subhead" data-reveal><h3>Brochures</h3><span class="chip">A4 · 210 × 297 mm · 3 designs</span></div>
+        <div class="grid grid--3" data-gallery="brochures"></div>
+
+        <div class="subhead" data-reveal><h3>Banners</h3><span class="chip">1920 × 1080 px · 2 designs</span></div>
+        <div class="grid grid--2 grid--land" data-gallery="banners"></div>
+
+        <div class="subhead" data-reveal><h3>Banner Mockups</h3><span class="chip">1920 × 1080 px · 2 mockups</span></div>
+        <div class="grid grid--2 grid--land" data-gallery="bannerMockups"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         MOTION GRAPHICS
+         ============================================================ -->
+    <section class="section" id="motion">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <p class="eyebrow">05 — Motion</p>
+          <h2>Motion <em>Graphics</em></h2>
+          <p class="head__note">Previews play muted while visible. Click any video to watch it with controls.</p>
+        </div>
+
+        <div class="subhead" data-reveal><h3>Vertical Videos</h3><span class="chip">1080 × 1920 px · 6 videos</span></div>
+        <div class="grid grid--3" data-gallery="reelsV"></div>
+
+        <div class="subhead" data-reveal><h3>Landscape Videos</h3><span class="chip">1920 × 1080 px · 2 videos</span></div>
+        <div class="grid grid--2 grid--land" data-gallery="reelsH"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         MOBILE APP DESIGN (built with HTML/CSS, no image links needed)
+         ============================================================ -->
+    <section class="section" id="app">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <p class="eyebrow">06 — Mobile App</p>
+          <h2>Mobile App <em>Design</em></h2>
+          <p class="head__note">Is an innovative tool for indoor plants. It allows users 
+to easily monitor and manage all aspects of their plants 
+well-being. With personalized tips, watering schedules, 
+and other useful features, Plante helps you create 
+optimal conditions for the growth and flourishing of
+your green companions.</p>
+        </div>
+
+        <!-- Banner: multiple app screens together -->
+        <div class="app-banner" data-reveal>
+          <div class="phone phone--side phone--l" style="--tilt:18deg" aria-hidden="true">
+            <div class="phone__screen">
+              <div class="ui-status"><span>9:41</span><span>●●●</span></div>
+              <div class="ui-title">Overview</div>
+              <div class="ui-bars"><i style="--h:35%"></i><i style="--h:60%"></i><i class="on" style="--h:85%"></i><i style="--h:50%"></i><i style="--h:70%"></i></div>
+              <div class="ui-row"><span class="ui-dot"></span><div class="ui-lines"><span class="ui-line" style="--w:70%"></span><span class="ui-line" style="--w:45%"></span></div></div>
+              <div class="ui-row"><span class="ui-dot"></span><div class="ui-lines"><span class="ui-line" style="--w:60%"></span><span class="ui-line" style="--w:40%"></span></div></div>
+              <div class="ui-tabs"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+
+          <div class="phone phone--main" aria-hidden="true">
+            <div class="phone__screen">
+              <div class="ui-status"><span>9:41</span><span>●●●</span></div>
+              <div class="ui-title">Hello there 👋</div>
+              <div class="ui-hero"><span class="ui-line" style="--w:55%"></span><span class="ui-line" style="--w:35%"></span><b>Today</b></div>
+              <div class="ui-row"><span class="ui-dot"></span><div class="ui-lines"><span class="ui-line" style="--w:75%"></span><span class="ui-line" style="--w:50%"></span></div></div>
+              <div class="ui-row"><span class="ui-dot"></span><div class="ui-lines"><span class="ui-line" style="--w:65%"></span><span class="ui-line" style="--w:42%"></span></div></div>
+              <div class="ui-row"><span class="ui-dot"></span><div class="ui-lines"><span class="ui-line" style="--w:70%"></span><span class="ui-line" style="--w:38%"></span></div></div>
+              <div class="ui-tabs"><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+
+          <div class="phone phone--side phone--r" style="--tilt:-18deg" aria-hidden="true">
+            <div class="phone__screen">
+              <div class="ui-status"><span>9:41</span><span>●●●</span></div>
+              <div class="ui-avatar"></div>
+              <div class="ui-lines ui-lines--center"><span class="ui-line" style="--w:60%"></span><span class="ui-line" style="--w:40%"></span></div>
+              <div class="ui-btn">Follow</div>
+              <div class="ui-row"><span class="ui-dot"></span><div class="ui-lines"><span class="ui-line" style="--w:65%"></span><span class="ui-line" style="--w:45%"></span></div></div>
+              <div class="ui-row"><span class="ui-dot"></span><div class="ui-lines"><span class="ui-line" style="--w:55%"></span><span class="ui-line" style="--w:35%"></span></div></div>
+              <div class="ui-tabs"><i></i><i></i><i></i><i class="on"></i></div>
+            </div>
+          </div>
+        </div>
+        <p class="caption" data-reveal>App screens — banner view</p>
+
+        <!-- One full front-facing screen with the app logo -->
+        <div class="app-front" data-reveal>
+          <div class="phone phone--front" role="img" aria-label="Front view of the Nova app splash screen with its logo">
+            <div class="phone__screen phone__screen--splash">
+              <div class="splash__logo">
+                <img src="images/logo-nova.png" alt="" aria-hidden="true">
+              </div>
+              <div class="splash__name">Nova</div>
+              <div class="splash__tag">Design. Create. Inspire.</div>
+              <div class="ui-btn ui-btn--wide">Get Started</div>
+            </div>
+          </div>
+        </div>
+        <p class="caption" data-reveal>App splash screen — front view with logo</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WEBSITE DESIGN
+         ============================================================ -->
+    <section class="section" id="web">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <p class="eyebrow">07 — Web</p>
+          <h2>Website <em>Design</em></h2>
+        </div>
+        <div class="grid grid--1" data-gallery="web"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+         EDIT: fill your real details in the CONTACT object at the top of script.js
+         ============================================================ -->
+    <section class="section section--contact" id="contact">
+      <div class="wrap">
+        <div class="head" data-reveal>
+          <p class="eyebrow">08 — Contact</p>
+          <h2>Have a project or <em>opportunity</em> in mind?</h2>
+          <p class="head__note">Let's connect and create something meaningful.</p>
+        </div>
+
+        <div class="contact">
+          <a class="card contact__item" href="#contact" data-contact="email" data-reveal>
+            <span class="contact__label">Email</span>
+            <span class="contact__value" data-contact-text>27anuragshukla2000@gmail.com</span>
+            <span class="contact__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="card contact__item" href="#contact" data-contact="phone" data-reveal style="--i:1">
+            <span class="contact__label">Phone</span>
+            <span class="contact__value" data-contact-text>7015731528</span>
+            <span class="contact__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="card contact__item" href="#contact" data-contact="linkedin" data-filled="LinkedIn profile" data-reveal style="--i:2">
+            <span class="contact__label">LinkedIn</span>
+            <span class="contact__value" data-contact-text>https://www.linkedin.com/in/anurag-shukla-0a301a2a3/</span>
+            <span class="contact__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="card contact__item" href="#contact" data-contact="behance" data-filled="Behance portfolio" data-reveal style="--i:3">
+            <span class="contact__label">Behance</span>
+            <span class="contact__value" data-contact-text>https://www.behance.net/anuragshukla9</span>
+            <span class="contact__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="card contact__item" href="#contact" data-contact="instagram" data-filled="Instagram profile" data-reveal style="--i:4">
+            <span class="contact__label">Instagram</span>
+            <span class="contact__value" data-contact-text>Add your Instagram link</span>
+            <span class="contact__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="card contact__item" href="#contact" data-contact="resume" data-filled="Download resume" data-reveal style="--i:5">
+            <span class="contact__label">Resume</span>
+            <span class="contact__value" data-contact-text>https://drive.google.com/file/d/1m8vMbVY9MYpiJ88VYW9Gj8xGd7Y02gn2/view</span>
+            <span class="contact__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p><b>Anurag Shukla</b> — Graphic/UI Designer</p>
+      <p>© <span id="year">2026</span> All rights reserved.</p>
+      <a href="#home" class="footer__top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
